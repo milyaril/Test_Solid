@@ -8,10 +8,69 @@
         <link rel="stylesheet" href="../style/style.css"> 
         <script src="../style/script.js"></script>
     </head>
+        <!-- Нас не учили именовать классы по БЭМ и в целом я только сейчас узнала, что это такое -->
+        <!-- Если именование класса покажется странным, то это из-за моей неопытности -->
     <body>
-        <header>
-            <!-- Нас не учили именовать классы по БЭМ и в целом я только сейчас узнала, что это такое -->
-             <!-- Если именование класса покажется странным, то это из-за моей неопытности -->
+        <header class = "bank-header">
+            <div class ="bank-header__top header-top">
+                <div class = "header-top__container container">
+
+                    <nav class="header-top__nav">
+                        <a href = "#" class = "header-top__link header-top__link--active">Частным клиентам</a>
+                        <a href = "#" class = "header-top__link">Для бизнеса</a>
+                        <span class = "header-top__separator">|</span>
+                        <a href = "#" class = "header-top__link">О банке</a>
+                        <a href = "#" class = "header-top__link">Офисы</a>
+                    </nav>
+
+                    <div class = "header-top__info">
+                        <span class = "header-top__phone">8 (800) 775-56-06</span>
+                        <div class = "header-top__location">
+                            <img src = "../image/location.svg" alt = "" class = "header-top__location-icon">
+                            <span class="header-top__city">Хабаровск</span>
+                        </div>
+                        <a href = "#" class = "header-top__lang">English</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class = "bank-header__main header-main">
+                <div class = "header-main__container container">
+                    <div class="header-main__logo logo">
+                        <img src = "../image/Logo.svg" alt = "Солид Банк" class = "logo__img">
+                    </div>
+
+                    <nav class = "header-main__nav main-menu">
+                        <ul class = "main-menu__list">
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Кредиты</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Вклады</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Обмен валют</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Карты</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Ипотека</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Переводы</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Страхование</a></li>
+                            <li class = "main-menu__item">
+                                <a href = "#" class = "main-menu__link main-menu__link--dropdown">Сервисы</a>
+                                <img src = "../image/chevron.svg" class = "main-menu__arrow" alt = "">
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class = "header-main__actions actions">
+                        <div class = "actions__item">
+                            <img src = "../image/Phone.svg" class="actions__icon-phone" alt = "">
+                            <a href = "#" class = "actions__callback">Заказать звонок</a>
+                        </div>
+
+                        <div class = "actions__item">
+                            <img src = "../image/login.svg" class = "actions__icon-login" alt = "">
+                            <a href = "#" class = "actions__login-btn">Интернет-банк</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </header>
     </body>
 

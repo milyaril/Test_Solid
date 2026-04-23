@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('../fonts/ibm-plex-regular.ttf') format('truetype'); /*Формат добавила на всякий случай для совместимости с браузерами*/
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'IBM Plex Sans';
+    src: url('../fonts/ibm-plex-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/*сброс стилей*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #333;
+    -webkit-font-smoothing: antialiased; /* Добавила для сглаживания букв */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+
+
+
+/*общие компоненты*/
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*хедер*/
+
+.bank-header {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.bank-header__top {
+    border-bottom: 1px solid #F2F2F2;
+}
+
+
+.header-top{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.header-top__container {
+    padding: 0 60px 0 16px
+}
+
+.header-top__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-top__link {
+    color: #666;
+    padding: 16px 0;
+    margin-right: 16px;
+}
+
+.header-top__link--active {
+    color: #313133;
+    font-weight: 600;
+    box-shadow: inset 0 -2px 0 #760135;
+}
+
+.header-top__separator {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    margin: 0 16px;
+    vertical-align: middle;
+    font-size: 0;
+    background-color: #E0E1E6;
+    overflow: hidden;
+}
+
+.header-top__info {
+    display: flex;
+    align-items: center;
+}
+
+.header-top__phone {
+    margin-right: 16px;
+    font-weight: 600;
+}
+
+.header-top__location {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.header-top__location-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    display: block;
+}
+
+.header-top__lang {
+    text-decoration: none;
+    color:#0D0D0D;
+    padding: 16px 0;
+}
+
+.bank-header__main {
+    padding: 0;
+}
+
+.header-main__container {
+    padding: 0 60px 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.header-main__logo {
+    margin: 19px 24px 19px 0;
+}
+
+.logo__img {
+    width: 130px;
+    height: 30px;
+    display: block;
+}
+
+.main-menu__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.main-menu__list {
+    display: flex;
+    list-style: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    gap: 16px;
+    align-items: center;
+}
+
+.main-menu__link {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #0D0D0D;
+    white-space: nowrap;
+    line-height: 20px;
+}
+
+.main-menu__link:hover {
+    color: #8B1A3E
+}
+
+.main-menu__dropdown {
+    display: flex;
+    align-items: center;
+    position:relative;
+    gap: 4px;
+}
+
+.main-menu__arrow{
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+}
+
+.header-main__actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.actions__item {
+    display: flex;
+    align-items: center;
+}
+
+.actions__item + .actions__item {
+    margin-left: 0px;
+}
+
+.actions__icon-phone,
+.actions__icon-login {
+    width: 24px;
+    height: 24px;
+}
+
+.actions__icon-phone {
+    margin-right: 8px;
+}
+
+.actions__icon-login {
+    margin-right: 8px;
+}
+
+.action__link-green {
+    color: #00A36D;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.actions__callback {
+    color: #00A36D;
+    font-weight: 500;
+}
+
+.actions__login-btn {
+    color: #8B1A3E;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
