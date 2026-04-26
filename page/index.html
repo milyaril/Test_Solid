@@ -26,7 +26,7 @@
                     <div class = "header-top__info">
                         <span class = "header-top__phone">8 (800) 775-56-06</span>
                         <div class = "header-top__location">
-                            <img src = "../image/location.svg" alt = "" class = "header-top__location-icon">
+                            <img src = "../image/icons/location.svg" alt = "" class = "header-top__location-icon">
                             <span class="header-top__city">Хабаровск</span>
                         </div>
                         <a href = "#" class = "header-top__lang">English</a>
@@ -38,7 +38,7 @@
             <div class = "bank-header__main header-main">
                 <div class = "header-main__container container">
                     <div class="header-main__logo logo">
-                        <img src = "../image/Logo.svg" alt = "Солид Банк" class = "logo__img">
+                        <img src = "../image/icons/Logo.svg" alt = "Солид Банк" class = "logo__img">
                     </div>
 
                     <nav class = "header-main__nav main-menu">
@@ -52,19 +52,19 @@
                             <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Страхование</a></li>
                             <li class = "main-menu__item">
                                 <a href = "#" class = "main-menu__link main-menu__link--dropdown">Сервисы</a>
-                                <img src = "../image/chevron.svg" class = "main-menu__arrow" alt = "">
+                                <img src = "../image/icons/arrow_down.svg" class = "main-menu__arrow" alt = "">
                             </li>
                         </ul>
                     </nav>
 
                     <div class = "header-main__actions actions">
                         <div class = "actions__item">
-                            <img src = "../image/Phone.svg" class="actions__icon-phone" alt = "">
+                            <img src = "../image/icons/Phone.svg" class="actions__icon-phone" alt = "">
                             <a href = "#" class = "actions__callback">Заказать звонок</a>
                         </div>
 
                         <div class = "actions__item">
-                            <img src = "../image/login.svg" class = "actions__icon-login" alt = "">
+                            <img src = "../image/icons/login.svg" class = "actions__icon-login" alt = "">
                             <a href = "#" class = "actions__login-btn">Интернет-банк</a>
                         </div>
                     </div>
@@ -88,9 +88,9 @@
 
                     <nav class = "breadcrumb">
                         <a href = "#" class = "breadcrumb__link">Главная</a>
-                        <img src = "../image/Vector.svg" class = "breadcrumb__arrow">
+                        <img src = "../image/icons/arrow_right.svg" class = "breadcrumb__arrow">
                         <a href = "#" class = "breadcrumb__link">Кредит</a>
-                        <img src = "../image/Vector.svg" class = "breadcrumb__arrow">
+                        <img src = "../image/icons/arrow_right.svg" class = "breadcrumb__arrow">
                         <a href = "#" class = "breadcrumb__current">Автокредит</a>                
                     </nav>
                     <div class ="hero__body">
@@ -110,7 +110,7 @@
 
                             <div class = "hero__car-wrapper">
                                 <div class = "hero__circle hero__circle--main"></div>
-                               <img src = "../image/car.png" alt="Автомобиль" class = "hero__car">
+                               <img src = "../image/cars/car_micro_banner.png" alt="Автомобиль" class = "img-responsive hero__car">
                             </div>
                       </div>
                   </div>
@@ -123,29 +123,178 @@
 
                     <div class = "car-selection__header">
                         <h2 class = "car-selection__title">Выбери себе авто</h2>
-                        <button class = "car-selection__toggle">Свернуть список машин <img src = "../image/chevron1.svg" alt = ""></button>
+                        <button class = "car-selection__toggle">
+                            Свернуть список машин 
+                            <img src = "../image/icons/arrow_up.svg" alt = "" class = "img-icon"></button>
                     </div>
 
                     <div class = "car-filters">
-                        <div class = "car-filters__item">
+                        <div class = "car-filters__item car-filters__item--brand">
                             <label class = "car-filters__label">Марка</label>
-                            <div class = "car-filters__select">Выбрать</div>
+                            <div class = "car-filters__select-wrapper">
+                                <select class = "car-filters__select">
+                                    <option value = "" disabled selected>Выбрать</option>
+                                    <option value="toyota">Toyota</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="mersedes">Mercedes</option>
+                                </select>
+                                <img src = "../image/icons/arrow_down.svg" alt = "" class = "car-filters__arrow">
+                            </div>
                         </div>
-                        <div class = "car-filters__item">
+
+                        <div class = "car-filters__item car-filters__item--year">
                             <label class = "car-filters__label">Год</label>
-                            <div class = "car-filters__select">Выбрать</div>
+                            <div class = "car-filters__select-wrapper">
+                                <select class = "car-filters__select">
+                                    <option value="" disabled selected>Выбрать</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2022">2021</option>
+                                    <option value="2022">2020</option>
+                                    <option value="2022">2019</option>
+                                    <option value="2022">2018</option>
+                                    <option value="2022">2017</option>
+                                    <option value="2022">2016</option>
+                                    <option value="2022">2015</option>
+                                    <option value="2022">2014</option>
+                                    <option value="2022">2013</option>
+                                    <option value="2022">2012</option>
+                                    <option value="2022">2011</option>
+                                </select>
+                                <img src = "../image/icons/arrow_down.svg" alt = "" class = "car-filters__arrow">
+                            </div>
                         </div>
-                        <div class="car-filters__item">
+
+                        <div class="car-filters__item car-filters__item--price">
                             <label class = "car-filters__label">Цена</label>
                             <div class = "car-filters__range">
-                                <input type = "text" placeholder="0">
-                                <span class = "car-filters__dash">-</span>
-                                <input type = "text" placeholder="0">
+                                <input type = "text" placeholder="От" class = "car-filters__input">
+                                <div class = "car-filters__dash-icon"></div>
+                                <input type = "text" placeholder="До" class = "car-filters__input">
                             </div>
                         </div>
                     </div>
 
                 </div>
+
+                <div class = "car-offers">
+                    <article class = "car-card car-card--best">
+                        <div class = "car-card__content">
+                            <span class = "car-card__badge">Лучшее предложение</span>
+                            <h3 class = "car-card__title">Renault Arkana drrive</h3>
+                            <p class = "car-card__description">
+                                Купе-кроссовер Renault ARKANA — автомобиль, созданный с чистого листа.<br> 
+                                В нем все по-новому: от дизайна кузова до эргономики салона. Получилось<br>
+                                эмоционально и надежно — оцените сами!
+                            </p>
+                            <div class = "car-card__price">от 1 316 000 ₽</div>
+                            <a href = "#" class = "car-card__more">
+                                Подробнее
+                                <img src = "../image/icons/arrow_right.svg" alt="" class = "car-card__arrow">
+                            </a>
+                        </div>
+                        <div class = "car-card__visual">
+                            <button class="slider-btn slider-btn--prev slider-btn--hidden" onclick="moveSlider(this, -1)">
+                                <img src = "../image/buttons/right.png" alt = "Назад" class = "slider-btn__img slider-btn__img--mirror">
+                            </button>
+                            <div class = "car-card__slider-wrapper">
+                                <div class="car-card__slider">
+                                    <div class = "car-card__slide car-card__slide--active"><img src="../image/cars/Renault_Arkana_drive/one_third.png" alt = "Renault Arkana 1" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src="../image/cars/Renault_Arkana_drive/front.png" alt = "Renault Arkana 2" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src="../image/cars/Renault_Arkana_drive/side.png" alt = "Renault Arkana 3" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src="../image/cars/Renault_Arkana_drive/behind.png" alt = "Renault Arkana 4" class = "car-card__img"></div>
+                                </div>
+                            </div>
+                            <button class="slider-btn slider-btn--next" onclick="moveSlider(this, 1)">
+                                <img src = "../image/buttons/right.png" alt = "Вперёд" class = "slider-btn__img">
+                            </button>
+                        </div>
+                    </article>
+                    <article class = "car-card car-card--best">
+                        <div class="car-card__content">
+                            <span class = "car-card__badge">Лучшее предложение</span>
+                            <h3 class = "car-card__title">Volkswagen Tiguan PA</h3>
+                            <p class = "car-card__description">
+                                Новый Volkswagen Tiguan - это воплощение стиля и высоких технологий.<br>
+                                Просторный салон, мощный двигатель и передовые системы безопасности.<br>
+                                Ваш идеальный спутник для города и путешествий - проверь в деле!
+                            </p>
+                            <div class = "car-card__price">от 2 395 000 ₽</div>
+                            <a href = "#" class = "car-card__more">
+                                Подробнее
+                                <img src = "../image/icons/arrow_right.svg" alt = "" class = "car-card__arrow">
+                            </a>
+                        </div>
+                        <div class = "car-card__visual">
+                            <button class = "slider-btn slider-btn--prev slider-btn--hidden" onclick="moveSlider(this, -1)">
+                                <img src = "../image/buttons/right.png" alt = "Назад" class = "slider-btn__img slider-btn__img--mirror">
+                            </button>
+                            <div class = "car-card__slider-wrapper">
+                                <div class = "car-card__slider">
+                                    <div class = "car-card__slide car-card__slide--active"><img src ="../image/cars/Renault_Arkana_drive/one_third.png" alt = "Volkswagen 1" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Renault_Arkana_drive/front.png" alt = "Volkswagen 2" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Renault_Arkana_drive/side.png" alt="Volkswagen 3" class="car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Renault_Arkana_drive/behind.png" alt="Volkswagen 4" class="car-card__img"></div>
+                                </div>
+                            </div>
+                            <button class = "slider-btn slider-btn--next" onclick="moveSlider(this, 1)">
+                                <img src = "../image/buttons/right.png" alt="Вперёд" class="slider-btn__img">
+                            </button>
+                        </div>
+
+                    </article>
+                    <article class = "car-card car-card--best">
+                        <div class = "car-card__content">
+                            <span class = "car-card__badge">Лучшее предложение</span>
+                            <h3 class = car-card__title>BMW X7</h3>
+                            <p class = "car-card__description">
+                                BMW X7 открывает новую эру роскоши и бескомпромиссного комфорта.<br>
+                                Исколючительная динамика сочетаются с изысканными деталями интерьера.<br>
+                                Ощутите превосходство в каждой поездке - статус в каждом движении!
+                            </p>
+                            <div class = "car-card__price">от 8 188 000 ₽</div>
+                            <a href = "#" class ="car-card__more">
+                                Подробнее
+                                <img src = "../image/icons/arrow_right.svg" alt="" class = "car-card__arrow">
+                            </a>
+                        </div>
+                        <div class = "car-card__visual">
+                            <button class = "slider-btn slider-btn--prev slider-btn--hidden" onclick = "moveSlider(this, -1)">
+                                <img src = "../image/buttons/right.png" alt = "Назад" class = "slider-btn__img slider-btn__img--mirror">
+                            </button>
+                            <div class = "car-card__slider-wrapper">
+                                <div class = "car-card__slider">
+                                    <div class="car-card__slide car-card__slide--active"><img src = "../image/cars/Renault_Arkana_drive/one_third.png" alt = "BMW 1" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Renault_Arkana_drive/front.png" alt = "BMW 2" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Renault_Arkana_drive/side.png" alt = "BMW 3" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Renault_Arkana_drive/behind.png" alt = "BMW 4" class = "car-card__img"></div>
+                                </div>
+                            </div>
+                            <button class = "slider-btn slider-btn--next" onclick="moveSlider(this, 1)">
+                                <img src = "../image/buttons/right.png" alt = "Вперёд" class = "slider-btn__img">
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <section class = "cars-catalog">
+                    <div class = "cars-grid">
+                        <article class = "car-item">
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/Renault_Arkana_drive/one_third.png" alt = "KIA Sportage" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">KIA Sportage LUXE+ 2л</h4>
+                                <p class = "car-item__city">г. Якутск</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">2 211 700 ₽</span>
+                                    <a href="#" class = "car-item__link">Подробнее</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </section>
         </main>
 
