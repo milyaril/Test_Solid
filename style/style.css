@@ -989,7 +989,7 @@ a {
 
 .car-item {
     width: 354px;
-    height: 336px;
+    min-height: 1px;
     background: #FFFFFF;
     border-radius: 16px;
     padding: 16px;
@@ -1000,7 +1000,7 @@ a {
 }
 
 .car-item__image-wrapper {
-    width: 322px;
+    width: 100%px;
     height: 200px;
     border-radius: 16px;
     overflow: hidden;
@@ -1009,13 +1009,14 @@ a {
 
 .car-item__img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4 ease;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.66s ease-in-out;
+    display: block
 }
 
 .car-item:hover .car-item__img{
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .car-item__title{
@@ -1033,7 +1034,7 @@ a {
     font-weight: 400;
     font-size: 15px;
     line-height: 100%;
-    margin: 0 0 28px 0;
+    margin: 0 0 8px 0;
     color: #000;
     height: 20px;
 }
@@ -1056,6 +1057,44 @@ a {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 15px;
     color: #000;
-    text-decoration: underline;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.car-item__arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.car-item__link::after{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url('../image/buttons/right.png') no-repeat center / contain;
+    background-size: contain;
+    margin-left: 0;
+    opacity: 0;
+    margin-left: -10px;
+    transition: all 0.3s ease;
+    transform: translateX(-10px);
+}
+
+.car-item:hover .car-item__link {
+    color:#760135
+}
+
+.car-item:hover .car-item__link::after{
     opacity: 1;
+    margin-left: 8px;
+    transform: translateX(0);
+}
+
+.car-item:hover .car-item__arrow {
+    opacity: 1;
+    transform: translateX(8px);
 }
