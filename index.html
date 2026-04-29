@@ -1,0 +1,792 @@
+<!-- Я знаю, что некоторые детали необязательны, но всё равно решила прописать для корректного отображения содержимого страницы -->
+<html lang = "ru"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <title>СОЛИД БАНК - Автокредит</title>
+        <link rel="stylesheet" href="../style/style.css"> 
+        <script src="../style/script.js"></script>
+    </head>
+        <!-- Нас не учили именовать классы по БЭМ и в целом я только сейчас узнала, что это такое -->
+        <!-- Если именование класса покажется странным, то это из-за моей неопытности -->
+    <body>
+        <header class = "bank-header">
+            <div class ="bank-header__top header-top">
+                <div class = "header-top__container container">
+
+                    <nav class="header-top__nav">
+                        <a href = "#" class = "header-top__link header-top__link--active">Частным клиентам</a>
+                        <a href = "#" class = "header-top__link">Для бизнеса</a>
+                        <span class = "header-top__separator">|</span>
+                        <a href = "#" class = "header-top__link">О банке</a>
+                        <a href = "#" class = "header-top__link">Офисы</a>
+                    </nav>
+
+                    <div class = "header-top__info">
+                        <span class = "header-top__phone">8 (800) 775-56-06</span>
+                        <div class = "header-top__location">
+                            <img src = "../image/icons/location.svg" alt = "" class = "header-top__location-icon">
+                            <span class="header-top__city">Хабаровск</span>
+                        </div>
+                        <a href = "#" class = "header-top__lang">English</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class = "bank-header__main header-main">
+                <div class = "header-main__container container">
+                    <div class="header-main__logo logo">
+                        <img src = "../image/icons/Logo.svg" alt = "Солид Банк" class = "logo__img">
+                    </div>
+
+                    <nav class = "header-main__nav main-menu">
+                        <ul class = "main-menu__list">
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Кредиты</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Вклады</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Обмен валют</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Карты</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Ипотека</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Переводы</a></li>
+                            <li class = "main-menu__item"><a href = "#" class = "main-menu__link">Страхование</a></li>
+                            <li class = "main-menu__item">
+                                <a href = "#" class = "main-menu__link main-menu__link--dropdown">Сервисы</a>
+                                <img src = "../image/icons/arrow_down.svg" class = "main-menu__arrow" alt = "">
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class = "header-main__actions actions">
+                        <div class = "actions__item">
+                            <img src = "../image/icons/Phone.svg" class="actions__icon-phone" alt = "">
+                            <a href = "#" class = "actions__callback">Заказать звонок</a>
+                        </div>
+
+                        <div class = "actions__item">
+                            <img src = "../image/icons/login.svg" class = "actions__icon-login" alt = "">
+                            <a href = "#" class = "actions__login-btn">Интернет-банк</a>
+                        </div>
+
+                        <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu__inner">
+                    <div class="mobile-menu__contacts">
+                        <div class="mobile-menu__contact-block">
+                            <img src="../image/icons/Phone.svg" alt="" class="mobile-menu__icon">
+                            <div>
+                                <a href="tel:88007755606" class="mobile-menu__phone">8 800 775-56-06</a>
+                                <p class="mobile-menu__sub">Для звонков по всей России (бесплатно)</p>
+                            </div>
+                        </div>
+                        <div class="mobile-menu__contact-block">
+                            <img src="../image/icons/Phone.svg" alt="" class="mobile-menu__icon">
+                            <div>
+                                <a href="tel:+74952323723" class="mobile-menu__phone">+7 495 232-37-23</a>
+                                <p class="mobile-menu__sub">Для блокировки карт (круглосуточно)</p>
+                            </div>
+                        </div>
+                        <div class="mobile-menu__contact-block">
+                            <img src="../image/icons/location.svg" alt="" class="mobile-menu__icon">
+                            <div>
+                                <span class="mobile-menu__city">Хабаровск</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="header-nav-row">
+            <div class="container header-nav-row__container">
+                <nav class="header-main__nav main-menu" style="width:100%;">
+                    <ul class="main-menu__list">
+                        <li class="main-menu__item"><a href="#" class="main-menu__link">Кредиты</a></li>
+                        <li class="main-menu__item"><a href="#" class="main-menu__link">Вклады</a></li>
+                        <li class="main-menu__item"><a href="#" class="main-menu__link">Обмен валют</a></li>
+                        <li class="main-menu__item"><a href="#" class="main-menu__link">Карты</a></li>
+                        <li class="main-menu__item"><a href="#" class="main-menu__link">Ипотека</a></li>
+                        <li class="main-menu__item"><a href="#" class="main-menu__link">Переводы</a></li>
+                        <li class="main-menu__item"><a href="#" class="main-menu__link">Страхование</a></li>
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link main-menu__link--dropdown">Сервисы</a>
+                            <img src="../image/icons/arrow_down.svg" class="main-menu__arrow" alt="">
+                        </li>
+                        <li class="main-menu__item main-menu__item--more">
+                            <a href="#" class="main-menu__link" style="display:flex;align-items:center;gap:4px;">
+                                Ещё
+                                <img src="../image/icons/arrow_down.svg" style="width:14px;height:14px;" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header-actions-row">
+            <div class="container header-actions-row__container">
+                <div class="header-actions-row__item">
+                    <img src="../image/icons/Phone.svg" alt="" class="header-actions-row__icon">
+                    <a href="#" class="header-actions-row__link">8 800 775 56 06</a>
+                </div>
+                <div class="header-actions-row__item">
+                    <img src="../image/icons/login.svg" alt="" class="header-actions-row__icon">
+                    <a href="#" class="header-actions-row__link">Интернет-банк</a>
+                </div>
+            </div>
+        </div>
+
+        <main>
+
+            <section class = "hero">
+                <div class = "hero__container container">
+
+                    <div class = "hero__blur-oval"></div>
+
+                    <div class = "hero__lines-container">
+                        <div class = "hero__line hero__line--1"></div>
+                        <div class = "hero__line hero__line--2"></div>
+                        <div class = "hero__line hero__line--3"></div>
+                    </div>
+                    <nav class = "breadcrumb">
+                        <a href = "#" class = "breadcrumb__link">Главная</a>
+                        <img src = "../image/icons/arrow_right.svg" class = "breadcrumb__arrow">
+                        <a href = "#" class = "breadcrumb__link">Кредит</a>
+                        <img src = "../image/icons/arrow_right.svg" class = "breadcrumb__arrow">
+                        <a href = "#" class = "breadcrumb__current">Автокредит</a>                
+                    </nav>
+                    <div class ="hero__body">
+                        <div class = "hero__content">
+                            <h1 class = "hero__title">Автокредит от 7,5% годовых</h1>
+                            <p class = "hero__subtitle">на покупку авто у дилера или частного лица</p>
+                            <a href = "#" class = "hero__btn">Оформить</a>
+                        </div>
+
+                        <div class = "hero__visual">
+                            <div class = "hero__circle--decor hero__circle--d1"></div>
+                            <div class = "hero__circle--decor hero__circle--d2"></div>
+                            <div class = "hero__circle--decor hero__circle--d3"></div>
+                            <div class = "hero__circle--decor hero__circle--d4"></div>
+                            <div class = "hero__circle--decor hero__circle--d5"></div>
+                            <div class = "hero__circle--decor hero__circle--d6"></div>
+
+                            <div class = "hero__car-wrapper">
+                                <div class = "hero__circle hero__circle--main"></div>
+                               <img src = "../image/cars/car_micro_banner.png" alt="Автомобиль" class = "img-responsive hero__car">
+                            </div>
+                      </div>
+                  </div>
+                  <div class = "hero__bottom-gradient"></div>
+             </div>
+            </section>
+
+            <section class = "car-selection">
+                <div class = "container car-selection__container">
+
+                    <div class = "car-selection__header">
+                        <h2 class = "car-selection__title">Выбери себе авто</h2>
+                        <button class = "car-selection__toggle">
+                            Свернуть список машин 
+                            <img src = "../image/icons/arrow_up.svg" alt = "" class = "img-icon"></button>
+                    </div>
+
+                    <div class = "car-filters">
+                        <div class = "car-filters__item car-filters__item--brand">
+                            <label class = "car-filters__label">Марка</label>
+                            <div class = "car-filters__select-wrapper">
+                                <select class = "car-filters__select">
+                                    <option value = "" disabled selected>Выбрать</option>
+                                    <option value="toyota">Toyota</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="mersedes">Mercedes</option>
+                                </select>
+                                <img src = "../image/icons/arrow_down.svg" alt = "" class = "car-filters__arrow">
+                            </div>
+                        </div>
+
+                        <div class = "car-filters__item car-filters__item--year">
+                            <label class = "car-filters__label">Год</label>
+                            <div class = "car-filters__select-wrapper">
+                                <select class = "car-filters__select">
+                                    <option value="" disabled selected>Выбрать</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2022">2021</option>
+                                    <option value="2022">2020</option>
+                                    <option value="2022">2019</option>
+                                    <option value="2022">2018</option>
+                                    <option value="2022">2017</option>
+                                    <option value="2022">2016</option>
+                                    <option value="2022">2015</option>
+                                    <option value="2022">2014</option>
+                                    <option value="2022">2013</option>
+                                    <option value="2022">2012</option>
+                                    <option value="2022">2011</option>
+                                </select>
+                                <img src = "../image/icons/arrow_down.svg" alt = "" class = "car-filters__arrow">
+                            </div>
+                        </div>
+
+                        <div class="car-filters__item car-filters__item--price">
+                            <label class = "car-filters__label">Цена</label>
+                            <div class = "car-filters__range">
+                                <input type = "text" placeholder="От" class = "car-filters__input">
+                                <div class = "car-filters__dash-icon"></div>
+                                <input type = "text" placeholder="До" class = "car-filters__input">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class = "car-offers">
+                    <article class = "car-card car-card--best">
+                        <div class = "car-card__content">
+                            <span class = "car-card__badge">Лучшее предложение</span>
+                            <h3 class = "car-card__title">Renault Arkana drrive</h3>
+                            <p class = "car-card__description">
+                                Купе-кроссовер Renault ARKANA — автомобиль, созданный с чистого листа.<br> 
+                                В нем все по-новому: от дизайна кузова до эргономики салона. Получилось<br>
+                                эмоционально и надежно — оцените сами!
+                            </p>
+                            <div class = "car-card__price">от 1 316 000 ₽</div>
+                            <a href = "#" class = "car-card__more">
+                                Подробнее
+                                <img src = "../image/icons/Arrow.png" alt="" class = "car-card__arrow">
+                            </a>
+                        </div>
+                        <div class = "car-card__visual">
+                            <button class="slider-btn slider-btn--prev slider-btn--hidden" onclick="moveSlider(this, -1)">
+                                <img src = "../image/buttons/right.png" alt = "Назад" class = "slider-btn__img slider-btn__img--mirror">
+                            </button>
+                            <div class = "car-card__slider-wrapper">
+                                <div class="car-card__slider">
+                                    <div class = "car-card__slide car-card__slide--active"><img src="../image/cars/Renault_Arkana_drive/one_third.png" alt = "Renault Arkana 1" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src="../image/cars/Renault_Arkana_drive/front.png" alt = "Renault Arkana 2" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src="../image/cars/Renault_Arkana_drive/side.png" alt = "Renault Arkana 3" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src="../image/cars/Renault_Arkana_drive/behind.png" alt = "Renault Arkana 4" class = "car-card__img"></div>
+                                </div>
+                            </div>
+                            <button class="slider-btn slider-btn--next" onclick="moveSlider(this, 1)">
+                                <img src = "../image/buttons/right.png" alt = "Вперёд" class = "slider-btn__img">
+                            </button>
+                        </div>
+                    </article>
+                    <article class = "car-card car-card--best">
+                        <div class="car-card__content">
+                            <span class = "car-card__badge">Лучшее предложение</span>
+                            <h3 class = "car-card__title">Volkswagen Tiguan PA</h3>
+                            <p class = "car-card__description">
+                                Новый Volkswagen Tiguan - это воплощение стиля и высоких технологий.<br>
+                                Просторный салон, мощный двигатель и передовые системы безопасности.<br>
+                                Ваш идеальный спутник для города и путешествий - проверь в деле!
+                            </p>
+                            <div class = "car-card__price">от 2 395 000 ₽</div>
+                            <a href = "#" class = "car-card__more">
+                                Подробнее
+                                <img src = "../image/icons/Arrow.png" alt="" class = "car-card__arrow">
+                            </a>
+                        </div>
+                        <div class = "car-card__visual">
+                            <button class = "slider-btn slider-btn--prev slider-btn--hidden" onclick="moveSlider(this, -1)">
+                                <img src = "../image/buttons/right.png" alt = "Назад" class = "slider-btn__img slider-btn__img--mirror">
+                            </button>
+                            <div class = "car-card__slider-wrapper">
+                                <div class = "car-card__slider">
+                                    <div class = "car-card__slide car-card__slide--active"><img src ="../image/cars/Volkswagen_Tiguan_PA/one_third.png" alt = "Volkswagen 1" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Volkswagen_Tiguan_PA/behind_one_third.png" alt = "Volkswagen 2" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Volkswagen_Tiguan_PA/side.png" alt="Volkswagen 3" class="car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/Volkswagen_Tiguan_PA/behind.png" alt="Volkswagen 4" class="car-card__img"></div>
+                                </div>
+                            </div>
+                            <button class = "slider-btn slider-btn--next" onclick="moveSlider(this, 1)">
+                                <img src = "../image/buttons/right.png" alt="Вперёд" class="slider-btn__img">
+                            </button>
+                        </div>
+
+                    </article>
+                    <article class = "car-card car-card--best">
+                        <div class = "car-card__content">
+                            <span class = "car-card__badge">Лучшее предложение</span>
+                            <h3 class = car-card__title>BMW X7</h3>
+                            <p class = "car-card__description">
+                                BMW X7 открывает новую эру роскоши и бескомпромиссного комфорта.<br>
+                                Исколючительная динамика сочетаются с изысканными деталями интерьера.<br>
+                                Ощутите превосходство в каждой поездке - статус в каждом движении!
+                            </p>
+                            <div class = "car-card__price">от 8 188 000 ₽</div>
+                            <a href = "#" class ="car-card__more">
+                                Подробнее
+                                <img src = "../image/icons/Arrow.png" alt="" class = "car-card__arrow">
+                            </a>
+                        </div>
+                        <div class = "car-card__visual">
+                            <button class = "slider-btn slider-btn--prev slider-btn--hidden" onclick = "moveSlider(this, -1)">
+                                <img src = "../image/buttons/right.png" alt = "Назад" class = "slider-btn__img slider-btn__img--mirror">
+                            </button>
+                            <div class = "car-card__slider-wrapper">
+                                <div class = "car-card__slider">
+                                    <div class="car-card__slide car-card__slide--active"><img src = "../image/cars/BMW_X7/one_third.png" alt = "BMW 1" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/BMW_X7/side.png" alt = "BMW 2" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/BMW_X7/front.png" alt = "BMW 3" class = "car-card__img"></div>
+                                    <div class = "car-card__slide"><img src = "../image/cars/BMW_X7/behind.png" alt = "BMW 4" class = "car-card__img"></div>
+                                </div>
+                            </div>
+                            <button class = "slider-btn slider-btn--next" onclick="moveSlider(this, 1)">
+                                <img src = "../image/buttons/right.png" alt = "Вперёд" class = "slider-btn__img">
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <section class = "cars-catalog">
+                    <div class = "cars-grid">
+                        <article class = "car-item">
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/KIA_sportage.png" alt = "KIA Sportage" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">KIA Sportage LUXE+ 2Л</h4>
+                                <p class = "car-item__city">г. Якутск</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">2 211 700 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = "car-item">
+                            <div class="car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Skoda_Karoq.png" alt = "Skoda Karoq" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Skoda Karoq</h4>
+                                <p class ="car-item__city">г. Казань</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">1 790 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Citroen_c4.png" alt = "Citroen c4" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Citroen c4</h4>
+                                <p class = "car-item__city">г. Уфа</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">1 523 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Mercedes_benz_Gls400.png" alt = "Mercedes-benz Gls 400 D 4m Luxury" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Mercedes-benz Gls 400 D 4m Luxury</h4>
+                                <p class = "car-item__city">г. Казань</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">2 211 700 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Mercedes_bens_Gle350.png" alt = "Mercedes-benz Gle 350 D 4matic купе" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Mercedes-benz Gle 350 D 4matic купе</h4>
+                                <p class = "car-item__city">г. Казань</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">2 211 700 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Meredes_benz_Gle300.png" alt = "Mercedes-benz Gle 300 D 4matic Sport" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Mercedes-benz Gle 300 D 4matic Sport</h4>
+                                <p class = "car-item__city">г. Казань</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">2 211 700 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Kia_sportage2_4.png" alt = "Kia Sportage.Luxe + 2.4л" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Kia Sportage.Luxe+ 2.4л</h4>
+                                <p class = "car-item__city">г. Якутск</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">2 336 700 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/KIA_K5.png" alt = "Kia K5 Prestige. 2.5л" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Kia K5 Prestige. 2.5л</h4>
+                                <p class = "car-item__city">г. Якутск</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">2 242 400 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Honda_Freed.png" alt = "Honda Freed" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Honda Freed</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 650 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Nissan_Caravan_nv350.png" alt = "Nissan Caravan (nv350)" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Nissan Caravan (nv350)</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 1 250 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Toyota_Land_Cruizer_Prado.png" alt = "Toyota Land Cruizer Prado" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Toyota Land Cruizer Prado</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 2 500 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Toyota_Vitz.png" alt = "Toyota Vitz" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Toyota Vitz</h4>
+                                <p class = "car-item__city">C аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 480 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Toyota_Vitz_black.png" alt = "Toyota Vitz" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Toyota Vitz</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 520 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Mazda_Axela.png" alt = "Mazda Axela" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Mazda Axela</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 750 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Nissan_NV200_Vanette.png" alt = "Nissan NV200 Vanette" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Nissan NV200 Vanette</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 800 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Toyota_Vitz_Grey.png" alt = "Toyota Vitz Grey" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Toyota Vitz</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">1 050 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Honda_Civic.png" alt = "Honda Civic" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Honda Civic</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 600 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Suzuki_Jimny_JB23.png" alt = "Suzuki Jimny JB23" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Suzuki Jimny JB23</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 850 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class = car-item>
+                            <div class = "car-item__image-wrapper">
+                                <img src = "../image/cars/catalog/Honda_Zest_Spark.png" alt = "Honda Zest Spark" class = "car-item__img">
+                            </div>
+                            <div class = "car-item__info">
+                                <h4 class = "car-item__title">Honda Zest Spark</h4>
+                                <p class = "car-item__city">С аукциона Японии</p>
+                                <div class = "car-item__footer">
+                                    <span class = "car-item__price">от 440 000 ₽</span>
+                                    <a href="#" class="car-item__link"><span>Подробнее</span><img src="../image/icons/Arrow.png" alt="" class="car-item__arrow"></a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                    <button class="cars-show-all" onclick="toggleAllCars(this)">
+                        Показать все машины
+                        <img src="../image/icons/arrow_down.svg" alt="" class="img-icon">
+                    </button>
+                </section>
+                <div class = "loan-cta">
+                    <p class = "loan-cta__text">
+                        Не нашли автомобиль у нас, но нужен автокредит?
+                        <a href = "#" class = "loan-cta__link">Перейти к форме заявки</a>
+                    </p>
+                </div>
+                <section class="conditions">
+                    <div class = "conditions__container">
+                        <h2 class = "conditions__title">Общие условия</h2>
+
+                        <div class = "conditions__table">
+                            <div class = "conditions__row">
+                                <span class = "conditions__label">Срок</span>
+                                <span class = "conditions__value">от 6 месяцев до 6 лет</span>
+                            </div>
+                            <div class = "conditions__row">
+                                <span class = "conditions__label">Сумма</span>
+                                <span class = "conditions__value">от 200 000 до 5 000 000 руб.</span>
+                            </div>
+                            <div class = "conditions__row">
+                                <span class = "conditions__label">Годовая процентная ставка:</span>
+                                <span class = "conditions__value">от 7,5% *</span>
+                            </div>
+                            <div class = "conditions__row">
+                                <span class = "conditions__label">Возможность приобретения авто у частного лица</span>
+                                <span class = "conditions__value"></span>
+                            </div>
+                        </div>
+                        <a href="#" class = "conditions__more">
+                            Смотреть полные условия кредита
+                            <img src = "../image/icons/arrow_right.svg" alt = "" class = "conditions__arrow">
+                        </a>
+                    </div>
+                </section>
+                <section class="faq">
+                    <div class="faq__container">
+                        <img src="../image/icons/Question.png" alt="?" class="faq__icon">
+                        <h2 class="faq__title">Часто задаваемые<br>вопросы</h2>
+                        <details class="faq__details">
+                            <summary class="faq__item">
+                                <span class="faq__question-text">Как подать заявку на автокредит?</span>
+                                <img src="../image/icons/arrow_down.svg" alt="v" class="faq__arrow">
+                            </summary>
+                            <div class="faq__answer">честно, я не знаю</div>
+                        </details>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer class = "footer">
+            <div class = "footer__main">
+                <div class = "footer__container">
+                    <section class = "footer-nav">
+                        <h3 class = "footer-nav__title">Частным лицам</h3>
+                        <ul class = "footer-nav__list">
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Банковские карты</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Кредиты</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Вклады</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Ипотека</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Страхование</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Сейфовые ячейки</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Открытие счетов</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Обмен валюты</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Переводы</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Маркетплейс</a></li>
+                        </ul>
+                    </section>
+                    <section class ="footer-nav footer-nav--business">
+                        <h3 class = "footer-nav__title">Бизнесу</h3>
+                        <ul class = "footer-nav__list">
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Экспресс-МСБ</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Расчетно-кассовое обслуживание</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Онлайн резервирование счета</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Внешнеэкономическая деятельность</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Зарплатный проект</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Овердрафт</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Кредит</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Лизинг</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Депозиты</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Банковские гарантии</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Факторинг</a></li>
+                        </ul>
+                    </section>
+                    <section class = "footer-nav">
+                        <h3 class = "footer-nav__title">О банке</h3>
+                        <ul class = "footer-nav__list">
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Новости</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Вакансии</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Офисы</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Инвестиционные услуги</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">О банке</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Реквизиты</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Тарифы</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Монеты</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Непрофильные активы</a></li>     
+                        </ul>
+                    </section>
+                    <section class = "footer-nav footer-nav--other">
+                        <h3 class = "footer-nav__title">Дополнительные пункты</h3>
+                        <ul class = "footer-nav__list">
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">FATCA</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Страхование и другие услуги НФО</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Общие условия предоставления банковских гарантий в АО «Солид банк»</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Памятки по финансовой безопасности</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Обеспечение защиты прав потребителей финансовых услуг</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Методика определения справедливой стоимости финансовых инструментов</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Политика в отношении обработки персональных данных</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Лица, ответственные за сведения на сайте</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Аудиторская компания</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Надзорные органы</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Информация о процентных ставках по договорам банковского вклада с физическими лицами</a></li>
+                            <li class = "footer-nav__item"><a href = "#" class = "footer-nav__link">Информация, связанная с совершением Банком действий, предусмотренных пунктом 5.6 статьи 7 фз №115</a></li>
+                        </ul>
+                    </section>
+                    <div class = "footer__divider"></div>
+                    <section class = "footer-contacts">
+                        <div class = "footer-contacts__block">
+                            <a href ="tel:88007755606" class = "footer-contacts__phone footer-contacts__phone--accent">8 800 775-56-06</a>
+                            <p class = "footer-contacts__sub">Для звонков по всей России (бесплатно)</p>
+                        </div>
+                        <div class = "footer-contacts__block">
+                            <a href = "tel:+74952323723" class = "footer-contacts__phone">+7 495 232-37-23</a>
+                            <p class = "footer-contacts__sub">Для блокировки карт (круглосуточно)</p>
+                        </div>
+                        <div  class = "footer-apps">
+                            <a href = "#" class = "footer-apps__item"><img src = "../image/icons/Telegram.png"></a>
+                            <a href = "#" class = "footer-apps__item"><img src = "../image/icons/Vk.png"></a>
+                            <a href = "#" class = "footer-apps__item"><img src = "../image/icons/OK.png"></a>
+                            <a href = "#" class = "footer-apps__item"><img src = "../image/icons/Twitter.png"></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="footer__secondary">
+                <div class = "footer__container footer__container--bottom">
+                    <div class = "footer-docs">
+                        <div class = "footer-docs__row">
+                            <a href = "#" class = "footer-docs__link">FATCA</a>
+                            <a href = "#" class = "footer-docs__link">Страхование и другие услуги НФО</a>
+                            <a href = "#" class = "footer-docs__link">Общие условия предоставления банковских гарантий в АО «Солид банк»</a>
+                            <a href = "#" class = "footer-docs__link">Памятки по финансовой безопасности</a>
+                            <a href = "#" class = "footer-docs__link">Обеспечение защиты прав потребителей финансовых услуг</a>
+                        </div>
+                        <div class = "footer-docs__row">
+                            <a href = "#" class = "footer-docs__link">Методика определения справедливой стоимости финансовых инструментов</a>
+                            <a href = "#" class = "footer-docs__link">Политика в отношении обработки персональных данных</a>
+                            <a href = "#" class = "footer-docs__link">Лица, ответственные за сведения на сайте</a>
+                            <a href = "#" class = "footer-docs__link">Аудиторская компания</a>
+                            <a href = "#" class = "footer-docs__link">Надзорные органы</a>
+                        </div>
+                        <div class = "footer-docs__row">
+                            <a href = "#" class = "footer-docs__link">Информация о процентных ставках по договорам банковского вклада с физическими лицами</a>
+                            <a href = "#" class = "footer-docs__link">Информация, связанная с совершением Банком действий, предусмотренных пунктом 5.6 статьи 7 фз №115</a>
+                    </div>
+                </div>
+                <div class = "footer__line"></div>
+                <div class = "footer-info">
+                    <p class = "footer-info__copyright">
+                        © 2004 - 2021, АО «Солид Банк», официальный сайт, генеральная лицензия ЦБ РФ № 1329.
+                    </p>
+                    <p class = "footer-info__dev">
+                        Разработка сайта - <a href = "#" class = "footer-info__dev-link">RASA</a>
+                    </p>
+                </div>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>
