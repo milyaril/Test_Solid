@@ -64,6 +64,7 @@ a {
 /*хедер*/
 
 .bank-header {
+    background-color: #ffffff;
     width: 100%;
     position: relative;
     z-index: 100;
@@ -117,6 +118,7 @@ a {
 }
 
 .header-top__phone {
+    color: #760135;
     margin-right: 16px;
     font-weight: 600;
 }
@@ -345,7 +347,7 @@ a {
     letter-spacing: 0;
     margin-bottom: 16px;
     white-space: nowrap;
-    -webkit-text-stroke: 0.6px #0D0D0D;
+    -webkit-text-stroke: 0.9px #0D0D0D;
 }
 
 .hero__subtitle {
@@ -706,6 +708,10 @@ a {
     font-size: 14px;
 }
 
+.car-filters__select:has(option[value=""]:checked) {
+    color: #8E8E93;
+}
+
 .car-filters__arrow {
     position: absolute;
     right: 16px;
@@ -812,7 +818,7 @@ a {
 .car-card__title {
     color: #111111;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
     margin-bottom: 16px;
 }
@@ -831,6 +837,7 @@ a {
     font-weight: 500;
     line-height: 100%;
     margin-bottom: 21px;
+    text-shadow: 0.8px 0 0 #760135;
 }
 
 .car-card__more {
@@ -1062,56 +1069,98 @@ a {
 }
 
 .car-item__footer {
+    overflow: visible;
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
 .car-item__price {
     font-family: 'IBM Plex Sans',sans-serif;
     font-weight: 500;
     font-size: 17px;
+    text-shadow: 0.8px 0 0 #760135;
     line-height: 100%;
-    color: #760135
+    color: #760135;
 }
 
+/* Ссылка прижата к правому краю */
 .car-item__link {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 15px;
     color: #000;
     text-decoration: none;
-    display: flex;
-    align-items: center;
     position: relative;
-    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    white-space: nowrap;
+    width: 100px;
+    justify-content: flex-end;
 }
 
+/* Текст "Подробнее" внутри span — исчезает при ховере */
+.car-item__link span {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+/* Стрелка скрыта по умолчанию, абсолютно позиционирована справа */
 .car-item__arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
     opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
-.car-item__link::after{
+/* ::before — "Подробнее" появляется СЛЕВА от стрелки с задержкой */
+.car-item__link::before {
+    content: 'Подробнее';
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    color: #760135;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.car-item__link::after {
     display: none;
 }
 
+/* Ховер: старый текст быстро исчезает, потом появляются новый текст и стрелка */
 .car-item:hover .car-item__link,
 .car-item.is-touched .car-item__link {
-    color:#760135
 }
 
-.car-item:hover .car-item__link::after,
-.car-item.is-touched .car-item__link::after{
+.car-item:hover .car-item__link span,
+.car-item.is-touched .car-item__link span {
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.car-item:hover .car-item__link::before,
+.car-item.is-touched .car-item__link::before {
     opacity: 1;
-    margin-left: 8px;
-    transform: translateX(0);
+    transition: opacity 0.15s ease;
 }
 
 .car-item:hover .car-item__arrow,
 .car-item.is-touched .car-item__arrow {
     opacity: 1;
-    transform: translateX(8px);
+    transition: opacity 0.15s ease;
 }
 
 .loan-cta {
@@ -1192,7 +1241,7 @@ a {
 
 .conditions__label{
     font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 15px;
     line-height: 100%;
     color: #0d0d0d;
@@ -1434,8 +1483,9 @@ a {
     font-size: 24px;
     line-height: 100%;
     text-decoration: none;
-    color: #000;
+    color: #760135;
     display: block;
+    text-shadow: 0.8px 0 0 #760135;
 }
 
 .footer-contacts__phone--accent{
@@ -1464,6 +1514,15 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.footer-apps__item img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.5);
+
 }
 
 .footer__secondary {
@@ -2163,11 +2222,14 @@ a {
     }
 
     .car-card__title {
+        font-weight: 500;
+        text-shadow: 0.5px 0 0 #111111;
         font-size: 20px;
         margin-bottom: 12px;
     }
 
     .car-card__price {
+        font-weight: 500;
         font-size: 20px;
         margin-bottom: 16px;
     }
@@ -2200,9 +2262,9 @@ a {
     }
 
     .slider-btn {
-        top: 60px;
-        width: 20px;
-        height: 20px;
+        top: 100px;
+        width: 24px;
+        height: 24px;
         opacity: 1;
     }
 
@@ -2212,19 +2274,19 @@ a {
     }
 
     .slider-btn__img {
-        transform: scale(1.0);
+        transform: scale(1.5);
     }
 
     .slider-btn__img--mirror {
-        transform: scale(1.0) scaleX(-1);
+        transform: scale(1.4) scaleX(-1);
     }
 
     .slider-btn--prev {
-        left: 4px;
+        left: 25px;
     }
 
     .slider-btn--next {
-        right: 4px;
+        right: 25px;
     }
 
     .car-card__visual::before,
@@ -2372,7 +2434,7 @@ a {
     }
 
     .footer {
-        margin-top: 0;
+        margin-top: -50px;
     }
 
     .footer__container {
@@ -2557,6 +2619,7 @@ a {
         margin: 0 auto;
         overflow: hidden;
         position: relative;
+        background: linear-gradient(to top left, #e7a0e1, #d2ebf0);
     }
     .hero__container {
         min-height: 450px;
@@ -2664,12 +2727,12 @@ a {
     .hero__line--2 { top: -160px; left: 180px; }
     .hero__line--3 { top: -160px; left: 40px; }
 
-    .hero__circle--d1 { width: 28px; height: 28px; top: 24px; left: 24px; }
-    .hero__circle--d2 { width: 70px; height: 70px; top: 110px; left: -20px; }
-    .hero__circle--d3 { width: 26px; height: 26px; top: 220px; left: 50px; }
+    .hero__circle--d1 { width: 28px; height: 28px; top: 15px; left: 24px; }
+    .hero__circle--d2 { width: 70px; height: 70px; top: 80px; left: -25px; }
+    .hero__circle--d3 { width: 26px; height: 26px; top: 180px; left: 50px; }
     .hero__circle--d4 { width: 70px; height: 70px; top: 10px; left: 50%; right: auto; transform: translateX(70px); }
-    .hero__circle--d5 { width: 40px; height: 40px; top: 180px; left: 50%; right: auto; transform: translateX(110px); }
-    .hero__circle--d6 { width: 28px; height: 28px; top: 230px; left: 50%; right: auto; transform: translateX(80px); }
+    .hero__circle--d5 { width: 40px; height: 40px; top: 120px; left: 51%; right: auto; transform: translateX(110px); }
+    .hero__circle--d6 { width: 28px; height: 28px; top: 160px; left: 55%; right: auto; transform: translateX(80px); }
 
     .cars-catalog {
         padding: 0 16px;
@@ -2834,6 +2897,14 @@ a {
     .footer-info__dev {
         font-size: 12px;
     }
+
+    .footer-info__copyright{
+        margin-top: 24px;
+    }
+    .footer-info__dev{
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2885,14 +2956,15 @@ a {
         height: 24px;
         opacity: 1;
     }
+    
     .car-card .slider-btn .slider-btn__img {
         filter: none;
         width: 11.53px;
         height: 6.21px;
-        transform: scale(1);
+        transform: scale(2.0);
     }
     .car-card .slider-btn .slider-btn__img--mirror {
-        transform: scale(1) scaleX(-1);
+        transform: scale(2.0) scaleX(-1);
     }
     .car-card .slider-btn--hidden {
         opacity: 0;
@@ -2978,14 +3050,16 @@ a {
     }
     .hero__content {
         padding-left: 16px;
-        padding-top: 24px;
+        padding-top: 65px;
         padding-bottom: 16px;
         max-width: 100%;
     }
     .hero__title {
-        font-size: 26px;
+        font-size: 25px;
+        font-weight: 600;
     }
     .hero__subtitle {
+        margin-top: -20px;
         font-size: 13px;
         margin-bottom: 16px;
     }
@@ -3018,8 +3092,10 @@ a {
         transform: translate(-50%, -50%);
     }
     .breadcrumb {
+        display: flex;
         left: 16px;
         font-size: 11px;
+        top: 16px;
     }
     .car-selection__header {
         padding-left: 16px;
@@ -3043,7 +3119,7 @@ a {
         flex: 1 1 calc(60% - 4px);
     }
     .car-offers {
-        padding: 0 16px;
+        padding: 0;
     }
     .car-card {
         flex-direction: column;
@@ -3058,7 +3134,7 @@ a {
         width: 100%;
         order: -1;
         margin-right: 0;
-        height: 180px;
+        height: auto;
     }
     .car-card__slider-wrapper {
         width: 100%;
@@ -3066,7 +3142,7 @@ a {
     }
     .car-card__slide img {
         width: 220px;
-        height: 130px;
+        height: 280px;
         object-fit: contain;
     }
     .car-card__content {
@@ -3123,7 +3199,7 @@ a {
         padding: 16px 0;
     }
     .footer-contacts__phone {
-        font-size: 18px;
+        font-size: 30px;
     }
     .footer-apps__item {
         width: 46px;
@@ -3157,7 +3233,7 @@ a {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.2;
-    color: #1A1A1A;
+    color: #760135;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -3169,6 +3245,7 @@ a {
 }
 
 @media (max-width: 480px) {
+    
     .header-actions-row {
         display: block;
         width: 100%;
@@ -3182,9 +3259,6 @@ a {
     .header-actions-row__link {
         font-size: 13px;
     }
-}
-
-@media (max-width: 480px) {
     .hero__car-wrapper {
         left: -20px;
     }
@@ -3192,8 +3266,11 @@ a {
         left: calc(50% + 20px);
     }
     .hero__car {
-        left: calc(50% + 10px);
+        left: calc(47%);
     }
+    .hero__line--1 { left: -30px; }
+    .hero__line--2 { left: -30px; }
+    .hero__line--3 { left: -30px; }
 
     .car-selection__header {
         flex-direction: column;
@@ -3237,9 +3314,9 @@ a {
     .car-card,
     .car-card--best {
         flex-direction: column;
-        width: 324px;
-        max-width: 100%;
-        height: 328px;
+        width: 100%;
+        max-width: calc(100% - 32px);
+        height: auto;
         min-height: 328px;
         margin-left: auto;
         margin-right: auto;
@@ -3249,7 +3326,7 @@ a {
     .car-card--best .car-card__visual {
         order: 1;
         width: 100%;
-        height: 150px;
+        height: 190px;
         position: relative;
         top: auto;
         left: auto;
@@ -3258,11 +3335,11 @@ a {
     }
     .car-card--best .car-card__slider-wrapper {
         width: 100%;
-        height: 140px;
+        height: 180px;
     }
     .car-card--best .car-card__slide img {
-        width: 220px;
-        height: 130px;
+        width: 80%;
+        height: 80%;
         object-fit: contain;
     }
     .car-card--best .car-card__content {
@@ -3277,18 +3354,19 @@ a {
     }
     .car-card--best .car-card__badge {
         margin-bottom: 8px;
-        font-size: 13px;
+        font-size: 15px;
     }
     .car-card--best .car-card__title {
-        font-weight: 600;
+        font-weight: 500;
         margin-top: 0;
         margin-bottom: 8px;
-        font-size: 18px;
+        font-size: 25px;
         line-height: 22px;
+        white-space: nowrap;
     }
     .car-card--best .car-card__price {
         margin-bottom: 8px;
-        font-size: 18px;
+        font-size: 23px;
         line-height: 22px;
     }
 
@@ -3309,6 +3387,7 @@ a {
         width: 100%;
         max-width: none;
         padding: 12px;
+        margin: 0 auto;
     }
     .car-item__image-wrapper {
         height: 220px;
@@ -3345,12 +3424,12 @@ a {
     }
 
     .hero__lines-container {
-        left: 0;
+        left: -10;
         right: 0;
     }
-    .hero__line--1 { top: -260px; }
-    .hero__line--2 { top: -180px; }
-    .hero__line--3 { top: -100px; }
+    .hero__line--1 { top: 190px; }
+    .hero__line--2 { top: -30px; }
+    .hero__line--3 { top: -240px; }
 
     .header-main__container {
         padding: 0 16px;
@@ -3383,11 +3462,99 @@ a {
     .header-actions-row__item:last-child {
         margin-left: auto;
     }
+    /* Интернет-банк жирнее */
+    .header-actions-row__item:last-child .header-actions-row__link {
+        font-weight: 700;
+    }
 
     .cars-show-all {
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
         text-align: center;
+    }
+}
+/* Мобильная строка навигации под хедером */
+.mobile-nav-row {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .mobile-nav-row {
+        display: block;
+        width: 100%;
+        background: #FFFFFF;
+        border-bottom: 1px solid #F0F1F4;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .mobile-nav-row::-webkit-scrollbar {
+        display: none;
+    }
+    .mobile-nav-row__list {
+        display: flex;
+        list-style: none;
+        padding: 0 16px;
+        margin: 0;
+        gap: 0;
+        white-space: nowrap;
+    }
+    .mobile-nav-row__item {}
+    .mobile-nav-row__link {
+        display: block;
+        padding: 12px 14px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #484A4D;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .mobile-nav-row__link--active {
+        color: #760135;
+        font-weight: 500;
+        box-shadow: inset 0 -2px 0 #760135;
+    }
+}
+
+/* Навигация внутри мобильного мини-баннера */
+.header-actions-row__nav {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .header-actions-row__nav {
+        display: block;
+        border-top: 1px solid #F0F1F4;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .header-actions-row__nav::-webkit-scrollbar {
+        display: none;
+    }
+    .header-actions-row__nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0 16px;
+        margin: 0;
+        white-space: nowrap;
+        gap: 0;
+    }
+    .header-actions-row__nav-link {
+        display: block;
+        padding: 10px 14px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #484A4D;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .header-actions-row__nav-link--active {
+        color: #760135;
+        font-weight: 500;
+        box-shadow: inset 0 -2px 0 #760135;
     }
 }
