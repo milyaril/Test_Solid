@@ -328,6 +328,7 @@ a {
     justify-content: space-between;
     width: 100%;
     flex: 1;
+    
 }
 
 .hero__container {
@@ -393,6 +394,7 @@ a {
     margin-top: 15px;
     margin-right: 95.5px;
     flex-shrink: 0;
+    
 }
 
 .hero__car-wrapper {
@@ -610,10 +612,10 @@ a {
 .car-filters,
 .car-offers,
 .cars-catalog {
-    max-height: 5000px;
+    max-height: none;
     opacity: 1;
-    overflow: hidden;
-    transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.6s ease, margin 0.6s ease;
+    overflow: visible;
+    transition: opacity 0.4s ease, padding 0.6s ease, margin 0.6s ease;
 }
 
 .is-hidden {
@@ -2340,7 +2342,7 @@ a {
         display: none;
     }
 
-    .cars-grid.is-expanded .car-item {
+    .cars-grid.is-expanded .car-item:nth-child(n) {
         display: flex;
     }
 
@@ -2643,7 +2645,6 @@ a {
         max-width: 100%;
         width: 100%;
         margin: 0 auto;
-        overflow: hidden;
         position: relative;
         background: linear-gradient(to top left, #e7a0e1, #d2ebf0);
     }
@@ -2661,6 +2662,7 @@ a {
         width: 100%;
         height: 100%;
         position: relative;
+        
     }
     .hero__content {
         max-width: 100%;
@@ -2756,9 +2758,9 @@ a {
     .hero__circle--d1 { width: 28px; height: 28px; top: 15px; left: 24px; }
     .hero__circle--d2 { width: 70px; height: 70px; top: 80px; left: -25px; }
     .hero__circle--d3 { width: 26px; height: 26px; top: 180px; left: 50px; }
-    .hero__circle--d4 { width: 70px; height: 70px; top: 10px; left: 50%; right: auto; transform: translateX(70px); }
-    .hero__circle--d5 { width: 40px; height: 40px; top: 120px; left: 51%; right: auto; transform: translateX(110px); }
-    .hero__circle--d6 { width: 28px; height: 28px; top: 160px; left: 55%; right: auto; transform: translateX(80px); }
+    .hero__circle--d4 { width: 70px; height: 70px; top: 13px; left: 50%; right: auto; transform: translateX(70px) translateY(-10px); }
+    .hero__circle--d5 { width: 40px; height: 40px; top: 120px; left: 45%; right: auto; transform: translateX(110px); }
+    .hero__circle--d6 { width: 28px; height: 28px; top: 160px; left: 49%; right: auto; transform: translateX(80px); }
 
     .cars-catalog {
         padding: 0 16px;
@@ -2771,7 +2773,7 @@ a {
     .cars-grid .car-item:nth-child(n+4) {
         display: none;
     }
-    .cars-grid.is-expanded .car-item {
+    .cars-grid.is-expanded .car-item:nth-child(n) {
         display: flex;
     }
 
@@ -2976,25 +2978,34 @@ a {
     }
 
     .car-card .slider-btn {
+        margin-top: -8px;
         background: transparent;
         border-radius: 0;
-        width: 24px;
-        height: 24px;
+        width: 12px;
+        height: 12px;
         opacity: 1;
     }
     
     .car-card .slider-btn .slider-btn__img {
         filter: none;
-        width: 11.53px;
-        height: 6.21px;
-        transform: scale(2.0);
+        width: 12px;
+        height: 12px;
+        transform: scale(0.8);
     }
     .car-card .slider-btn .slider-btn__img--mirror {
-        transform: scale(2.0) scaleX(-1);
+        transform: scale(0.8) scaleX(-1);
     }
     .car-card .slider-btn--hidden {
         opacity: 0;
         pointer-events: none;
+    }
+
+    .slider-btn--prev {
+        left: 16px;
+    }
+
+    .slider-btn--next {
+        right: 16px;
     }
 
     .conditions {
@@ -3034,12 +3045,12 @@ a {
     }
     .conditions__label {
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 700;
         color: #0D0D0D;
     }
     .conditions__value {
         font-size: 15px;
-        font-weight: 400;
+        font-weight: 700;
         color: #606266;
     }
     .conditions__more {
@@ -3102,10 +3113,8 @@ a {
     .hero__visual {
         right: auto;
         width: 100%;
-        overflow: hidden;
     }
     .hero {
-        overflow: hidden;
         height: 450px;
         max-width: 100%;
     }
@@ -3150,9 +3159,13 @@ a {
     }
     .car-filters__item--brand {
         flex: 1 1 100%;
-        width: 100%;
+        width: auto;
+        min-width: 0;
+        margin-right: 0;
     }
     .car-filters__item--year {
+        width: auto;
+        min-width: 0;
         flex: 1 1 calc(40% - 4px);
     }
     .car-filters__item--price {
