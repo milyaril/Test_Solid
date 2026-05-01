@@ -784,8 +784,6 @@ a {
     pointer-events: none;
 }
 
-
-
 /*Лучшие предложения*/
 
 .car-offers {
@@ -2578,7 +2576,55 @@ a {
     }
 }
 
+.header-actions-row {
+    display: none; 
+}
+.header-actions-row__container {
+    display: flex;
+    gap: 24px;
+    padding: 10px 16px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header-actions-row__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.header-actions-row__icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.header-actions-row__link {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #760135;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.header-actions-row__item:first-child .header-actions-row__link {
+    color: #760135;
+}
+.header-actions-row__link:hover {
+    color: #760135;
+}
+
+/* Мобильная строка навигации под хедером */
+.mobile-nav-row {
+    display: none;
+}
+
+/* Навигация внутри мобильного мини-баннера */
+.header-actions-row__nav {
+    display: none;
+}
+
 @media (max-width: 360px) {
+
 
     .header-main__actions .actions__item {
         display: none;
@@ -2646,7 +2692,7 @@ a {
         width: 100%;
         margin: 0 auto;
         position: relative;
-        background: linear-gradient(to top left, #e7a0e1, #d2ebf0);
+        background: linear-gradient(to top left, #e7a0e1, #e8f8fc);
     }
     .hero__container {
         min-height: 450px;
@@ -2933,9 +2979,6 @@ a {
         margin-top: 16px;
         margin-bottom: 24px;
     }
-}
-
-@media (max-width: 360px) {
 
     .mobile-menu__nav {
         margin-top: 24px;
@@ -3071,9 +3114,8 @@ a {
     .footer-info__dev {
         font-family: 'IBM Plex Sans', sans-serif;
     }
-}
 
-@media (max-width: 360px) {
+
     .header-top__container,
     .header-main__container {
         padding: 0 16px;
@@ -3118,9 +3160,24 @@ a {
         height: 450px;
         max-width: 100%;
     }
-    .hero__line {
-        display: none;
+    .hero__lines-container {
+        display: block;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        width: 100%;
+        overflow: visible;
     }
+
+    .hero__line {
+        display: block;
+        width: 2000px;
+        height: 125px;
+        opacity: 0.07;
+    }
+    .hero__line--1 { top: 169px; left: -50px; }
+    .hero__line--2 { top: -30px; left: -50px; }
+    .hero__line--3 { top: -230px; left: -50px; }
     .hero__car-wrapper {
         width: 270px;
         left: 0;
@@ -3258,46 +3315,8 @@ a {
         width: 46px;
         height: 46px;
     }
-}
 
-.header-actions-row {
-    display: none; 
-}
-.header-actions-row__container {
-    display: flex;
-    gap: 24px;
-    padding: 10px 16px;
-    align-items: center;
-    justify-content: flex-start;
-}
-.header-actions-row__item {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-.header-actions-row__icon {
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-.header-actions-row__link {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.2;
-    color: #760135;
-    text-decoration: none;
-    white-space: nowrap;
-}
-.header-actions-row__item:first-child .header-actions-row__link {
-    color: #760135;
-}
-.header-actions-row__link:hover {
-    color: #760135;
-}
 
-@media (max-width: 360px) {
     
     .header-actions-row {
         display: block;
@@ -3324,9 +3343,7 @@ a {
     .hero__car {
         left: calc(47%);
     }
-    .hero__line--1 { left: -30px; }
-    .hero__line--2 { left: -30px; }
-    .hero__line--3 { left: -30px; }
+
 
     .car-selection__header {
         flex-direction: column;
@@ -3481,14 +3498,6 @@ a {
         margin: 16px auto 0;
     }
 
-    .hero__lines-container {
-        left: -10px;
-        right: 0;
-    }
-    .hero__line--1 { top: 190px; }
-    .hero__line--2 { top: -30px; }
-    .hero__line--3 { top: -240px; }
-
     .header-main__container {
         padding: 0 16px;
     }
@@ -3533,13 +3542,8 @@ a {
         justify-content: center;
         text-align: center;
     }
-}
-/* Мобильная строка навигации под хедером */
-.mobile-nav-row {
-    display: none;
-}
 
-@media (max-width: 360px) {
+
     .mobile-nav-row {
         display: block;
         width: 100%;
@@ -3576,14 +3580,8 @@ a {
         font-weight: 500;
         box-shadow: inset 0 -2px 0 #760135;
     }
-}
 
-/* Навигация внутри мобильного мини-баннера */
-.header-actions-row__nav {
-    display: none;
-}
 
-@media (max-width: 360px) {
     .header-actions-row__nav {
         display: block;
         border-top: 1px solid #F0F1F4;
