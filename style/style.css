@@ -106,10 +106,6 @@ a {
     box-shadow: inset 0 -2px 0 #760135;
 }
 
-.header-top__link--business {
-    font-weight: 600;
-    color: #313133;
-}
 
 .header-top__separator {
     display: inline-block;
@@ -1774,6 +1770,221 @@ a {
 
 .cars-show-all {
     display: none;
+}
+
+@media (max-width: 1000px) {
+    .header-top__container {
+        padding: 0 24px;
+    }
+    .header-main__container {
+        padding: 0 24px 0 16px;
+    }
+    .car-selection__header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .car-filters {
+        padding: 0 40px;
+    }
+    .cars-catalog {
+        padding: 0 40px;
+    }
+    .cars-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .car-offers {
+        max-width: calc(100% - 80px);
+    }
+    .conditions {
+        padding: 0 40px;
+    }
+    .faq {
+        padding: 0 40px;
+    }
+    .footer__container {
+        margin-left: 24px;
+    }
+    .footer__secondary {
+        width: 100%;
+    }
+    .footer__container--bottom {
+        padding: 0 24px 16px;
+    }
+}
+
+@media (max-width: 860px) {
+    .header-top__container {
+        padding: 0 16px;
+    }
+    .header-main__container {
+        padding: 0 16px;
+    }
+    .header-top__link:nth-child(4),
+    .header-top__link:nth-child(5) {
+        display: none;
+    }
+    .hero__content {
+        padding-left: 32px;
+        padding-top: 80px;
+        max-width: 55%;
+    }
+    .hero__title {
+        font-size: 32px;
+    }
+    .hero__visual {
+        right: -40px;
+        width: 380px;
+    }
+    .car-selection__header {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .car-filters {
+        padding: 0 24px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .car-filters__item--brand {
+        flex: 1 1 100%;
+        width: auto;
+        margin-right: 0;
+    }
+    .car-filters__item--year {
+        flex: 1 1 calc(40% - 6px);
+        width: auto;
+        margin-right: 0;
+    }
+    .car-filters__item--price {
+        flex: 1 1 calc(60% - 6px);
+    }
+    .cars-catalog {
+        padding: 0 24px;
+    }
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .car-offers {
+        max-width: 100%;
+        padding: 0 24px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .car-card {
+        height: auto;
+        min-height: 240px;
+    }
+    .car-card__visual {
+        width: 360px;
+        left: auto;
+        right: 0;
+    }
+    .conditions {
+        padding: 0 24px;
+    }
+    .conditions__container {
+        width: 100%;
+    }
+    .faq {
+        padding: 0 24px;
+    }
+    .faq__container {
+        width: 100%;
+    }
+    .footer__container {
+        margin-left: 16px;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .footer-nav {
+        width: auto;
+        flex: 1 1 40%;
+    }
+    .footer__container--bottom {
+        padding: 0 16px 16px;
+    }
+}
+
+@media (max-width: 460px) {
+    .header-top__link {
+        font-size: 13px;
+    }
+    .hero__title {
+        font-size: 24px;
+        white-space: normal;
+    }
+    .hero__subtitle {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+    .hero__btn {
+        width: 160px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .car-selection__title {
+        font-size: 22px;
+    }
+    .car-selection__toggle {
+        width: 100%;
+        max-width: calc(100% - 32px);
+        font-size: 14px;
+    }
+    .car-filters {
+        gap: 8px;
+    }
+    .car-filters__item--year,
+    .car-filters__item--price {
+        flex: 1 1 100%;
+    }
+    .car-card__visual {
+        width: 100%;
+        height: 160px;
+    }
+    .car-card__slider-wrapper {
+        width: 100%;
+        height: 140px;
+    }
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+    .car-item__image-wrapper {
+        height: 180px;
+    }
+    .loan-cta {
+        padding: 16px;
+        max-width: calc(100% - 32px);
+    }
+    .conditions__row {
+        padding: 12px 0;
+    }
+    .conditions__label,
+    .conditions__value {
+        font-size: 14px;
+    }
+    .faq__item {
+        padding: 14px 16px 14px 16px;
+    }
+    .faq__question-text {
+        font-size: 14px;
+        width: auto;
+        height: auto;
+    }
+    .footer-contacts__phone {
+        font-size: 20px;
+    }
+    .footer-apps__item {
+        width: 40px;
+        height: 40px;
+    }
+    .footer-nav {
+        flex: 1 1 100%;
+    }
+    .footer-info {
+        padding: 0 0 24px;
+    }
+    .mobile-menu__actions {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
